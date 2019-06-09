@@ -51,12 +51,8 @@ Energy: $e</tw-passagedata><tw-passagedata pid="3" name="To Germany" tags="" pos
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
 
 It is sunset. You are tired and go into the hotel of Black Forest near Stuttgart. You ask the guests and the staff about the creature. Someone mentioned they saw a shadow in the deep forest. But others believe he is drunk. You decide to:
-
 (enchant: &quot;Money&quot;, (text-colour: yellow))
-(enchant: &quot;Energy&quot;, (text-colour: green))
-(enchant: &quot;+&quot;, (text-colour: green))
-(enchant: &quot;-&quot;, (text-colour: red))
-
+(enchant: &quot;Energy&quot;, (text-colour: green))(enchant: &quot;+&quot;, (text-colour: green))(enchant: &quot;-&quot;, (text-colour: red))
 (link: &quot;Walk into the Black Forest and take a look. (-5 energy)&quot;)[(set: $e to $e - 5)(goto: &quot;Black Forest&quot;)[[Black Forest]]]
 (link: &quot;Sleep, save energy, and find out next morning. (-100 franc, +5 energy)&quot;)[(set:$money to $money - 100)(set: $e to $e + 5)(goto: &quot;Morning in the forest&quot;)[[Morning in the forest]]]
 
@@ -64,27 +60,16 @@ It is sunset. You are tired and go into the hotel of Black Forest near Stuttgart
 Money: $money
 Energy: $e</tw-passagedata><tw-passagedata pid="4" name="To France" tags="" position="1221,1464" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
-
 You go along Rhône, the river in France. But you find nothing. Gradually, you see Mediterranean. You feel so tired of chasing.
-
-(enchant: &quot;Money&quot;, (text-colour: yellow))
-(enchant: &quot;Energy&quot;, (text-colour: green))
-(enchant: &quot;+&quot;, (text-colour: green))
+(enchant: &quot;Money&quot;, (text-colour: yellow))(enchant: &quot;Energy&quot;, (text-colour: green))(enchant: &quot;+&quot;, (text-colour: green))
 (enchant: &quot;-&quot;, (text-colour: red))
-
 (link: &quot;Then You decide to get onto the ship that travels to Black Sea. (-500 franc, -5 energy)&quot;)[(set: $money to $money - 500)(set: $e to $e - 5)(goto: &quot;Black Sea&quot;)[[Black Sea]]]
 (link: &quot;Then you decide to go further east to Paris. (-150 franc, -3 energy)&quot;)[(set: $money to $money - 150)(set: $e to $e - 3)(goto: &quot;Paris&quot;)[[Paris]]]
 
 Money: $money
 Energy: $e</tw-passagedata><tw-passagedata pid="5" name="Start Chasing" tags="" position="1529,1480" size="200,200">(set: $money to 2000)
-(set: $e to 100)
-(enchant: &quot;Money&quot;, (text-colour: yellow))
-(enchant: &quot;Energy&quot;, (text-colour: green))
-(enchant: &quot;+&quot;, (text-colour: green))
-(enchant: &quot;-&quot;, (text-colour: red))
-
+(set: $e to 100)(enchant: &quot;Money&quot;, (text-colour: yellow))(enchant: &quot;Energy&quot;, (text-colour: green))(enchant: &quot;+&quot;, (text-colour: green))(enchant: &quot;-&quot;, (text-colour: red))
 You decide to leave Geneva, the hometown you love, to pursue and kill the monster that you created. You have $money franc and $e energy points for this mission. Which place do you want to go first?
-
 
 (link: &quot;Germany  (-200 franc -5 energy)&quot;)[(set: $money to $money - 200)(set: $e to $e - 5)(goto: &quot;To Germany&quot;)[[To Germany]]]
 (link: &quot;France  (-150 franc -3 energy)&quot;)[(set: $money to $money - 150)(set: $e to $e - 3)(goto: &quot;To France&quot;)[[To France]]]
@@ -93,14 +78,9 @@ You decide to leave Geneva, the hometown you love, to pursue and kill the monste
 Money: 2000
 Energy: 100</tw-passagedata><tw-passagedata pid="6" name="Black Sea" tags="" position="2121,1313" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
-
 After a few days, you arrived at the Black Sea. A lighting strikes onto the ground. The creature shows up. He said, &quot;Not yet. This is not the end.&quot;
 Suddenly, he disappeared. He is so fast that you cannot even catch.
-
-(enchant: &quot;Money&quot;, (text-colour: yellow))
-(enchant: &quot;Energy&quot;, (text-colour: green))
-(enchant: &quot;+&quot;, (text-colour: green))
-(enchant: &quot;-&quot;, (text-colour: red))
+(enchant: &quot;Money&quot;, (text-colour: yellow))(enchant: &quot;Energy&quot;, (text-colour: green))(enchant: &quot;+&quot;, (text-colour: green))(enchant: &quot;-&quot;, (text-colour: red))
 
 (link: &quot;You heard that there is some tools in Tartary that might be useful to kill the monster. So you go to Tartary. (-300 franc, -5 energy)&quot;)[(set: $money to $money - 300)(set: $e to $e - 5)(goto: &quot;Tartary&quot;)[[Tartary]]]
 
@@ -108,18 +88,12 @@ Suddenly, he disappeared. He is so fast that you cannot even catch.
 
 </tw-passagedata><tw-passagedata pid="7" name="Paris" tags="" position="1110,1446" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
-
 Paris is a beautiful city to take a tour. But you don&#39;t have the time for the scenery view. You ask everyone in the city about the creature. Someone suggests you to sail to west to America because that is the new land where is full of opportunities. You decide to:
-
-(enchant: &quot;Money&quot;, (text-colour: yellow))
-(enchant: &quot;Energy&quot;, (text-colour: green))
-(enchant: &quot;+&quot;, (text-colour: green))
-(enchant: &quot;-&quot;, (text-colour: red))
+(enchant: &quot;Money&quot;, (text-colour: yellow))(enchant: &quot;Energy&quot;, (text-colour: green))(enchant: &quot;+&quot;, (text-colour: green))(enchant: &quot;-&quot;, (text-colour: red))
 
 (link: &quot;Go west, sail to America (-500 franc, -10 energy)&quot;)[(set: $money to $money - 500)(set: $e to $e - 10)(goto: &quot;America&quot;)[[America]]]
 (link: &quot;Go east, ride to Germany (-250 franc, -7 energy)&quot;)[(set: $money to $money - 250)(set: $e to $e - 7)(goto: &quot;To Germany&quot;)[[To Germany]]]
 (link: &quot;Stay in Paris to look for more clues (-100 franc, +5 energy)&quot;)[(set: $money to $money - 100)(set: $e to $e + 5)(goto: &quot;Paris&quot;)[[Paris]]]
-
 
 Money: $money
 Energy: $e</tw-passagedata><tw-passagedata pid="8" name="Black Forest" tags="" position="1848,1636" size="100,100">(if: ((sign:$e) is -1))[
@@ -127,29 +101,17 @@ Energy: $e</tw-passagedata><tw-passagedata pid="8" name="Black Forest" tags="" p
 
 It was so dark, but you saw the sign of ember in the cave. The bonfire was just put off. After searching carefully, you found the a written text on the wall: &quot;This wood is so dark, and the fire is so dim. What other elements do we think of when we talk about Wu Xing in Chinese culture?&quot;
 
-(enchant: &quot;Money&quot;, (text-colour: yellow))
-(enchant: &quot;Energy&quot;, (text-colour: green))
-(enchant: &quot;+&quot;, (text-colour: green))
-(enchant: &quot;-&quot;, (text-colour: red))
-
+(enchant: &quot;Money&quot;, (text-colour: yellow))(enchant: &quot;Energy&quot;, (text-colour: green))(enchant: &quot;+&quot;, (text-colour: green))(enchant: &quot;-&quot;, (text-colour: red))
 (link: &quot;Food. It means the black colored food. So you go to France, the country that makes rye (black) bread. (-300 franc, -10 energy)&quot;)[(set: $money to $money - 300)(set: $e to $e - 10)(goto: &quot;Paris&quot;)[[Paris]]]
-
 (link: &quot;Water. You decide to go to Black Sea because you guess the text means black water. (-300 franc, -10 energy)&quot;)[(set: $money to $money - 300)(set: $e to $e - 10)(goto: &quot;Black Sea&quot;)[[Black Sea]]]
 
 Money: $money
 Energy: $e</tw-passagedata><tw-passagedata pid="9" name="Morning in the forest" tags="" position="1998,1625" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
-
-
 So lucky! You met a gunsmith in the hotel. After listening to your story, he gave you a discount to buy the shotgun, which only costs 1000 franc. Do you want to buy it?
 
-(enchant: &quot;Money&quot;, (text-colour: yellow))
-(enchant: &quot;Energy&quot;, (text-colour: green))
-(enchant: &quot;+&quot;, (text-colour: green))
-(enchant: &quot;-&quot;, (text-colour: red))
-
+(enchant: &quot;Money&quot;, (text-colour: yellow))(enchant: &quot;Energy&quot;, (text-colour: green))(enchant: &quot;+&quot;, (text-colour: green))(enchant: &quot;-&quot;, (text-colour: red))
 (link: &quot;Yes. And you continue the journey to Russia. (-1000 franc, -10 energy)&quot;)[(set: $shotgun to true)(set: $money to $money - 1000)(set: $e to $e - 10)(goto: &quot;Russia&quot;)[[Russia]]]
-
 (link: &quot;No. You thanked him and decided to go to Tartary, an ancient kingdom. (-7 energy)&quot;)[(set: $money to $money)(set: $e to $e - 7)(goto: &quot;Tartary&quot;)[[Tartary]]]
 
 Money: $money
@@ -160,13 +122,8 @@ It has been 32 years since the American Revolutionary War. After landing on Nort
 
 One day, you found a piece of paper on your desk: &quot;Find me in the North Pole.&quot;
 
-
 (link: &quot;It raised your anger. You decide to go north from America and look for the North Pole. (-500 franc, -10 energy)&quot;)[(set: $money to $money - 500)(set: $e to $e - 10)(goto: &quot;Canada&quot;)[[Canada]]]
 (link: &quot;You decide to go back to Paris and go with the road that you are familiar with. (-500 franc, -10 energy)&quot;)[(set: $money to $money - 500)(set: $e to $e - 10)(goto: &quot;Paris&quot;)[[Paris]]]
-
-
-
-
 
 
 Money: $money
@@ -184,13 +141,9 @@ You chase to the direction of the sound and the shadow. Then you find the creatu
 Money: $money
 Energy: $e</tw-passagedata><tw-passagedata pid="12" name="Russia" tags="" position="2334,1123" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
-
 You walk by foot on the plains in Russia. Some farmers tell you that they were shocked by the ghost that sometimes appears in the forests. They told you some directions to follow. Also, the creature left a few footsteps on the plain covered by snow. 
 You give the farmers with your money or the meat that you hunted to help them. In turns, they give you a sled dog, a sledge and a knife for future use.
-(enchant: &quot;Money&quot;, (text-colour: yellow))
-(enchant: &quot;Energy&quot;, (text-colour: green))
-(enchant: &quot;+&quot;, (text-colour: green))
-(enchant: &quot;-&quot;, (text-colour: red))
+(enchant: &quot;Money&quot;, (text-colour: yellow))(enchant: &quot;Energy&quot;, (text-colour: green))(enchant: &quot;+&quot;, (text-colour: green))(enchant: &quot;-&quot;, (text-colour: red))
 (link: &quot;Continue to go north.(-300 franc, -20 energy)&quot;)[(set: $knife to true)(set: $money to $money - 300)(set: $e to $e - 20)(goto: &quot;North Pole&quot;)[[North Pole]]]
 (link: &quot;You don&#39;t think you have enough money or energy to have an adventure in the north pole. So you go back to Geneva. (-5 energy, lose all the items)&quot;)[(set: $money to $money)(set: $e to $e - 5)(goto: &quot;Start Chasing&quot;)[[Start Chasing]]]
 
@@ -198,7 +151,6 @@ You give the farmers with your money or the meat that you hunted to help them. I
 Money: $money
 Energy: $e</tw-passagedata><tw-passagedata pid="13" name="Tartary" tags="" position="2287,1433" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
-
 Tartary is a place of magic. You used to believe in ancient science and travels around the cities of Tartary. One day, a witch showed up and said, &quot;Young man, I know you are chasing a creature that you have made by yourself. Here I have a weapon for you: A magic wand that can kill the monster. But you need to offer your 50 points of energy.&quot;
 
 Would you buy the wand using 50 engergy points?
@@ -229,8 +181,6 @@ Once, after the poor animals that conveyed you had with incredible toil gained t
 
 (link: &quot;It is the monster! (-10 energy)&quot;)[(set: $money to $money)(set: $e to $e - 10)(goto: &quot;Final Battle&quot;)[[Final Battle]]]</tw-passagedata><tw-passagedata pid="15" name="Final Battle" tags="" position="1614,1066" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
-
-
 The monster said, &quot;My creator! I don&#39;t mean to destroy you. But I see your resolution to kill me. It is time to reach the end.&quot;
 
 He pushed you, you tried to keep from falling. The edge of the glacier route’s pavement lies under you.
@@ -246,7 +196,6 @@ A foot came up from the top of the pitt and kicked you in the face.
 ](else:)[
 	(link: &quot;There is no weapon. The monster beat you.&quot;)[(goto: &quot;Death Ending&quot;)[[Death Ending]]]
 ]
-
 (enchant: &quot;Money&quot;, (text-colour: yellow))
 (enchant: &quot;Energy&quot;, (text-colour: green))
 (enchant: &quot;+&quot;, (text-colour: green))
