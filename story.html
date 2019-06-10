@@ -28,7 +28,9 @@ tw-link
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -127,6 +129,7 @@ It has been 32 years since the American Revolutionary War. After landing on Nort
 
 One day, you found a piece of paper on your desk: &quot;Find me in the North Pole.&quot;
 
+(set: $money to $money + 1000)(set: $e to $e + 20)
 (link: &quot;It raised your anger. You decide to go north from America and look for the North Pole. (-500 franc, -10 energy)&quot;)[(set: $money to $money - 500)(set: $e to $e - 10)(goto: &quot;Canada&quot;)[[Canada]]]
 (link: &quot;You decide to go back to Paris and go with the road that you are familiar with. (-500 franc, -10 energy)&quot;)[(set: $money to $money - 500)(set: $e to $e - 10)(goto: &quot;Paris&quot;)[[Paris]]]
 
@@ -184,50 +187,120 @@ Once, after the poor animals that conveyed you had with incredible toil gained t
 (enchant: &quot;+&quot;, (text-colour: green))
 (enchant: &quot;-&quot;, (text-colour: red))
 
-(link: &quot;It is the monster! (-10 energy)&quot;)[(set: $money to $money)(set: $e to $e - 10)(goto: &quot;Final Battle&quot;)[[Final Battle]]]</tw-passagedata><tw-passagedata pid="15" name="Final Battle" tags="" position="1608,970" size="100,100">(if: ((sign:$e) is -1))[
+(link: &quot;It is the monster! (-10 energy)&quot;)[(set: $money to $money)(set: $e to $e - 10)(goto: &quot;Final Battle&quot;)[[Final Battle]]]
+
+Money: $money
+Energy: $e</tw-passagedata><tw-passagedata pid="15" name="Final Battle" tags="" position="1608,970" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
 The monster said, &quot;My creator! I don&#39;t mean to destroy you. But I see your resolution to kill me. It is time to reach the end.&quot;
 
 He pushed you, you tried to keep from falling. The edge of the glacier route’s pavement lies under you.
 Then you were pushed again.
-You fell to the right, into a pitt.
-A foot came up from the top of the pitt and kicked you in the face.
+You fell to the right, into an ice pit.
+A foot came up from the top of the pit and kicked you in the face.
 (if: $shotgun is true)[
-    (link: &quot;You rise and take out the shotgun. (-20 energy to use)&quot;)[(goto: &quot;Shotgun Ending&quot;)[[Shotgun Ending]]]
+    (link: &quot;You rise and take out the shotgun. (-20 energy to use)&quot;)[(set: $money to $money)(set: $e to $e - 20)(goto: &quot;Shotgun Ending&quot;)[[Shotgun Ending]]]
 ](else-if: $wand is true)[
-	(link: &quot;You take out the wand. (-5 energy to use)&quot;)[(goto: &quot;Wand Ending&quot;)[[Wand Ending]]]
+	(link: &quot;You take out the wand. (-5 energy to use)&quot;)[(set: $money to $money)(set: $e to $e - 5)(goto: &quot;Wand Ending&quot;)[[Wand Ending]]]
 ](else-if: $knife is true)[
-	(link: &quot;You take out the knife. (-40 energy to use)&quot;)[(goto: &quot;Knife Ending&quot;)[[Knife Ending]]]
+	(link: &quot;You take out the knife. (-40 energy to use)&quot;)[(set: $money to $money)(set: $e to $e - 40)(goto: &quot;Knife Ending&quot;)[[Knife Ending]]]
 ](else:)[
 	(link: &quot;There is no weapon. The monster beat you.&quot;)[(goto: &quot;Death Ending&quot;)[[Death Ending]]]
 ]
 (enchant: &quot;Money&quot;, (text-colour: yellow))
 (enchant: &quot;Energy&quot;, (text-colour: green))
 (enchant: &quot;+&quot;, (text-colour: green))
-(enchant: &quot;-&quot;, (text-colour: red))</tw-passagedata><tw-passagedata pid="16" name="Shotgun Ending" tags="" position="1389,1151" size="100,100">(if: ((sign:$e) is -1))[
+(enchant: &quot;-&quot;, (text-colour: red))
+
+
+Money: $money
+Energy: $e</tw-passagedata><tw-passagedata pid="16" name="Shotgun Ending" tags="" position="1389,1151" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
 
 The shotgun is so powerful! A bunch of bullet stick through the monster&#39;s body and tear it apart.
 
 Nice! You killed the monster! It is a great victory!
 
-You have never felt so relaxed before.</tw-passagedata><tw-passagedata pid="17" name="Wand Ending" tags="" position="1539,1151" size="100,100">(if: ((sign:$e) is -1))[
+You have never felt so relaxed before.
+
+(link: &quot;Thanks for playing! Go back to main page.&quot;)[(goto-url: &#39;https://rorschachly.github.io/FranekensteinStatic/&#39;)]
+
+Credit: 
+
+Storybook background image - https://hipwallpaper.com/storybook-backgrounds/
+
+Frankenstein, 1818, Mary Shelly
+
+Twine, the interactive story tool(https://twine2.neocities.org/)
+
+Thanks to the C LIT 240 class. Thanks for Instructor Jingsi!</tw-passagedata><tw-passagedata pid="17" name="Wand Ending" tags="" position="1539,1151" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
 
 The magic wand is useful! You pointed it to the monster and make the monster float in the air. Then the monster vanished after you spell &quot;Abrakadabra!&quot;.
 
 Nice! You killed the monster! It is a great victory!
 
-You have never felt so relaxed before. You mission is complete.</tw-passagedata><tw-passagedata pid="18" name="Knife Ending" tags="" position="1689,1151" size="100,100">(if: ((sign:$e) is -1))[
+You have never felt so relaxed before. You mission is complete.
+
+(link: &quot;Thanks for playing! Go back to main page.&quot;)[(goto-url: &#39;https://rorschachly.github.io/FranekensteinStatic/&#39;)]
+
+Credit: 
+
+Storybook background image - https://hipwallpaper.com/storybook-backgrounds/
+
+Frankenstein, 1818, Mary Shelly
+
+Twine, the interactive story tool(https://twine2.neocities.org/)
+
+Thanks to the C LIT 240 class. Thanks for Instructor Jingsi!</tw-passagedata><tw-passagedata pid="18" name="Knife Ending" tags="" position="1689,1151" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
-	
+
+It is so hard to use a knife to kill the monster. But you succeeded! When he was trying to push you again, you took out the knife and stabbed it into his body very fast.
+The monster&#39;s body floats on the icy water and went away.
+
+(link: &quot;Thanks for playing! Go back to main page.&quot;)[(goto-url: &#39;https://rorschachly.github.io/FranekensteinStatic/&#39;)]
+
+Credit: 
+
+Storybook background image - https://hipwallpaper.com/storybook-backgrounds/
+
+Frankenstein, 1818, Mary Shelly
+
+Twine, the interactive story tool(https://twine2.neocities.org/)
+
+Thanks to the C LIT 240 class. Thanks for Instructor Jingsi!
 </tw-passagedata><tw-passagedata pid="19" name="Death Ending" tags="" position="1839,1151" size="100,100">No!!!
 
 You end up with no weapons to kill the monster.
 The monster punched you again and you died.
-You should go back and get some weapons that helps.</tw-passagedata><tw-passagedata pid="20" name="Die No Energy" tags="" position="2125,804" size="100,100">You died because you have run out of energy points.
+You should go back and get some weapons that helps.
 
-(You need to enter the index (main) page to restart. Clicking on the undo button is useless.)</tw-passagedata><tw-passagedata pid="21" name="Canada" tags="" position="752,1077" size="100,100">(if: ((sign:$e) is -1))[
+
+
+(link: &quot;Thanks for playing! Go back to main page.&quot;)[(goto-url: &#39;https://rorschachly.github.io/FranekensteinStatic/&#39;)]
+
+Credit: 
+
+Storybook background image - https://hipwallpaper.com/storybook-backgrounds/
+
+Frankenstein, 1818, Mary Shelly
+
+Twine, the interactive story tool(https://twine2.neocities.org/)
+
+Thanks to the C LIT 240 class. Thanks for Instructor Jingsi!</tw-passagedata><tw-passagedata pid="20" name="Die No Energy" tags="" position="2125,804" size="100,100">You died because you have run out of energy points.
+
+
+(link: &quot;Thanks for playing! Go back to main page.&quot;)[(goto-url: &#39;https://rorschachly.github.io/FranekensteinStatic/&#39;)]
+
+Credit: 
+
+Storybook background image - https://hipwallpaper.com/storybook-backgrounds/
+
+Frankenstein, 1818, Mary Shelly
+
+Twine, the interactive story tool(https://twine2.neocities.org/)
+
+Thanks to the C LIT 240 class. Thanks for Instructor Jingsi!</tw-passagedata><tw-passagedata pid="21" name="Canada" tags="" position="752,1077" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
 (enchant: &quot;Money&quot;, (text-colour: yellow))(enchant: &quot;Energy&quot;, (text-colour: green))(enchant: &quot;+&quot;, (text-colour: green))(enchant: &quot;-&quot;, (text-colour: red))
 You arrive at the north part of modern Canada. (It is not called Canada in the 19th century.) When you are wandering on the plain, you find a bonfire that is not far from you. There is a message left by the monster: &quot;Come, my creator! Come to the North Pole, if you dare fighting with your weak energy, and no more equipments.&quot;
