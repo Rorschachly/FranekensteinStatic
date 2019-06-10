@@ -26,7 +26,11 @@ tw-link
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 
@@ -86,7 +90,8 @@ Suddenly, he disappeared. He is so fast that you cannot even catch.
 
 (link: &quot;Your instinct tells you, he will go north. So you go to Russia. (-400 franc, -8 energy)&quot;)[(set: $money to $money - 400)(set: $e to $e - 8)(goto: &quot;Russia&quot;)[[Russia]]]
 
-</tw-passagedata><tw-passagedata pid="7" name="Paris" tags="" position="1110,1446" size="100,100">(if: ((sign:$e) is -1))[
+Money: $money
+Energy: $e</tw-passagedata><tw-passagedata pid="7" name="Paris" tags="" position="1110,1446" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
 Paris is a beautiful city to take a tour. But you don&#39;t have the time for the scenery view. You ask everyone in the city about the creature. Someone suggests you to sail to west to America because that is the new land where is full of opportunities. You decide to:
 (enchant: &quot;Money&quot;, (text-colour: yellow))(enchant: &quot;Energy&quot;, (text-colour: green))(enchant: &quot;+&quot;, (text-colour: green))(enchant: &quot;-&quot;, (text-colour: red))
@@ -165,7 +170,7 @@ Would you buy the wand using 50 engergy points?
 (link: &quot;You want to stay to gain more energy, but you will need to sleep in the hotel. (-100 franc +5 energy)&quot;)[(set: $money to $money - 100)(set: $e to $e + 5)(goto: &quot;Tartary&quot;)[[Tartary]]]
 
 Money: $money
-Energy: $e</tw-passagedata><tw-passagedata pid="14" name="North Pole" tags="" position="1614,916" size="100,100">(if: ((sign:$e) is -1))[
+Energy: $e</tw-passagedata><tw-passagedata pid="14" name="North Pole" tags="" position="1609,791" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
 
 You now gained on the monster, so much so, that
@@ -179,7 +184,7 @@ Once, after the poor animals that conveyed you had with incredible toil gained t
 (enchant: &quot;+&quot;, (text-colour: green))
 (enchant: &quot;-&quot;, (text-colour: red))
 
-(link: &quot;It is the monster! (-10 energy)&quot;)[(set: $money to $money)(set: $e to $e - 10)(goto: &quot;Final Battle&quot;)[[Final Battle]]]</tw-passagedata><tw-passagedata pid="15" name="Final Battle" tags="" position="1614,1066" size="100,100">(if: ((sign:$e) is -1))[
+(link: &quot;It is the monster! (-10 energy)&quot;)[(set: $money to $money)(set: $e to $e - 10)(goto: &quot;Final Battle&quot;)[[Final Battle]]]</tw-passagedata><tw-passagedata pid="15" name="Final Battle" tags="" position="1608,970" size="100,100">(if: ((sign:$e) is -1))[
     (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
 The monster said, &quot;My creator! I don&#39;t mean to destroy you. But I see your resolution to kill me. It is time to reach the end.&quot;
 
@@ -199,10 +204,39 @@ A foot came up from the top of the pitt and kicked you in the face.
 (enchant: &quot;Money&quot;, (text-colour: yellow))
 (enchant: &quot;Energy&quot;, (text-colour: green))
 (enchant: &quot;+&quot;, (text-colour: green))
-(enchant: &quot;-&quot;, (text-colour: red))</tw-passagedata><tw-passagedata pid="16" name="Shotgun Ending" tags="" position="1389,1216" size="100,100">(if: ((sign:$e) is -1))[
-    (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]</tw-passagedata><tw-passagedata pid="17" name="Wand Ending" tags="" position="1539,1216" size="100,100">(if: ((sign:$e) is -1))[
-    (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]</tw-passagedata><tw-passagedata pid="18" name="Knife Ending" tags="" position="1689,1216" size="100,100">(if: ((sign:$e) is -1))[
-    (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]</tw-passagedata><tw-passagedata pid="19" name="Death Ending" tags="" position="1839,1216" size="100,100"></tw-passagedata><tw-passagedata pid="20" name="Die No Energy" tags="" position="2077,926" size="100,100">You died because you have run out of energy points.</tw-passagedata><tw-passagedata pid="21" name="Canada" tags="" position="752,1077" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+(enchant: &quot;-&quot;, (text-colour: red))</tw-passagedata><tw-passagedata pid="16" name="Shotgun Ending" tags="" position="1389,1151" size="100,100">(if: ((sign:$e) is -1))[
+    (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
+
+The shotgun is so powerful! A bunch of bullet stick through the monster&#39;s body and tear it apart.
+
+Nice! You killed the monster! It is a great victory!
+
+You have never felt so relaxed before.</tw-passagedata><tw-passagedata pid="17" name="Wand Ending" tags="" position="1539,1151" size="100,100">(if: ((sign:$e) is -1))[
+    (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
+
+The magic wand is useful! You pointed it to the monster and make the monster float in the air. Then the monster vanished after you spell &quot;Abrakadabra!&quot;.
+
+Nice! You killed the monster! It is a great victory!
+
+You have never felt so relaxed before. You mission is complete.</tw-passagedata><tw-passagedata pid="18" name="Knife Ending" tags="" position="1689,1151" size="100,100">(if: ((sign:$e) is -1))[
+    (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
+	
+</tw-passagedata><tw-passagedata pid="19" name="Death Ending" tags="" position="1839,1151" size="100,100">No!!!
+
+You end up with no weapons to kill the monster.
+The monster punched you again and you died.
+You should go back and get some weapons that helps.</tw-passagedata><tw-passagedata pid="20" name="Die No Energy" tags="" position="2125,804" size="100,100">You died because you have run out of energy points.
+
+(You need to enter the index (main) page to restart. Clicking on the undo button is useless.)</tw-passagedata><tw-passagedata pid="21" name="Canada" tags="" position="752,1077" size="100,100">(if: ((sign:$e) is -1))[
+    (goto: &quot;Die No Energy&quot;)[[Die No Energy]]]
+(enchant: &quot;Money&quot;, (text-colour: yellow))(enchant: &quot;Energy&quot;, (text-colour: green))(enchant: &quot;+&quot;, (text-colour: green))(enchant: &quot;-&quot;, (text-colour: red))
+You arrive at the north part of modern Canada. (It is not called Canada in the 19th century.) When you are wandering on the plain, you find a bonfire that is not far from you. There is a message left by the monster: &quot;Come, my creator! Come to the North Pole, if you dare fighting with your weak energy, and no more equipments.&quot;
+(link: &quot;Continue to go North. (-200 franc, -20 energy)&quot;)[(set: $money to $money - 200)(set: $e to $e - 20)(goto: &quot;North Pole&quot;)[[North Pole]]]
+(link: &quot;Go back to Boston. (-500 franc, -10 energy)&quot;)[(set: $money to $money - 500)(set: $e to $e - 10)(goto: &quot;America&quot;)[[America]]]
+
+
+Money: $money
+Energy: $e</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
